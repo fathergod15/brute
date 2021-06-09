@@ -27,4 +27,5 @@ jobs:
           black --version
           black --diff --check brute
           mypy --version
+          mypy --install-types
           mypy

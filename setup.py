@@ -43,7 +43,10 @@ setuptools.setup(
             "pylint",
             "pytest",
             "mock",
-            "mypy"
+            "mypy",
+            "types-requests",
+            "types-mock",
+            "types-paramiko"
         ]
     },
     classifiers=[
