@@ -5,22 +5,16 @@
 [![Github Issues](https://img.shields.io/github/issues/ex0dus-0x/brute.svg)](https://github.com/ex0dus-0x/brute/issues)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://codemuch.tech/license.txt)
 
+Crowd-sourced credential stuffing engine built for security professionals.
 
-Crowd-sourced credential stuffing engine built for security professionals
-
-![Registry Site](https://codemuch.tech/brute)
+> NOTE: a full overhaul is in the works to turn this into a comprehensive credential theft framework for red-teams.
 
 ## Introduction
 
-__brute__ is a Python-based library framework and engine that enables security professionals to rapidly construct bruteforce / credential stuffing attacks. It features both a multi-purpose command-line application (`brute`), and a software library that can be used in tandem to quickly generate standalone module scripts for attack.
+__brute__ is a Python-based library framework and engine that enables security professionals to rapidly construct bruteforce / credential stuffing attacks. It features both a 
+multi-purpose command-line application (`brute`), and a software library that can be used in tandem to quickly generate standalone module scripts for attack.
 
-You can use __brute__ to:
-
-* Quickly launch an attack with the `brute` CLI with an included module (ie. SMTP server, or a Twitter account)
-* Use the CLI to generate a module, which you can then run as a standalone script, or incorporate as part of your local module registry
-* Use community modules from the global registry to crowdsource your attacks (NOTE: global registry is WIP)
-
-### What can you do with it?
+### What are some tasks I can do with it?
 
 * Rapidly test publicly leaked credential corpora against multiple services.
 * Construct PoC scripts quickly to test rate-limiting for authentication systems.
@@ -31,11 +25,11 @@ You can use __brute__ to:
 * __Functional__ - works out-of-the-box with 7 default modules for attacks on both network protocols and web-based services
 * __Simple to use__ - launch an attack or implement an attack module in minutes and fewer lines of code!
 * __Plugin manager__ - implement your own attack modules, and upload them to the local and global registry, or pull others from the community.
-* __Logging facilities__ - incorporate dumped logs into a logging pipeline / SIEM.
+* __Logging facilities__ - incorporate dumped logs into a logging pipeline.
 
 ## Usage
 
-`brute` is built for Python 3.7+, and should work with any platform, preferably macOS/Linux.
+`brute` is built for Python 3.7+, and should work with any operating system, preferably macOS/Linux.
 
 To use `brute`, you can either install through `pip`:
 

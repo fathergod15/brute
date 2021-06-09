@@ -39,4 +39,4 @@ if __name__ == "__main__":
         wordlist=args.wordlist,
         delay=args.delay,
         headless=args.headless,
-    ).run()
+    ).run()  # type: ignore
