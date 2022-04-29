@@ -1,60 +1,60 @@
 #!/usr/bin/env python3
 """
-setup.py
+mymod.py
 
-    Installs brute as both a client library and CLI application locally.
+    Module Name:
+        mymod
 
+    Author:
+        YOU <you@email.com>
+
+    Description:
+        DESCRIPTION
 """
 
-import os
-import setuptools
+import dataclasses
 
-NAME = "brute"
-VERSION = "5.0"
+# include any other networking imports needed!
 
-REPO = "https://github.com/ex0dus-0x/brute"
-DESC = "crowd-sourced credential stuffing engine built for security professionals"
+from brute.core.protocol import ProtocolBruteforce
 
-# Main setup method
-setuptools.setup(
-    name = NAME,
-    version = VERSION,
-    author = "ex0dus",
-    description = DESC,
-    license = "MIT",
-    url=REPO,
-    download_url="{}/archive/v{}".format(REPO, VERSION),
-    packages = setuptools.find_packages(),
-    entry_points = {
-        "console_scripts": [
-            "brute=brute.__main__:main"
-        ],
-    },
-    install_requires=[
-        "requests",
-        "mechanize",
-        "paramiko",
-        "selenium",
-        "beautifulsoup4"
-    ],
-    extras_require={
-        "dev": [
-            "black",
-            "pylint",
-            "pytest",
-            "mock",
-            "mypy",
-            "types-requests",
-            "types-mock",
-            "types-paramiko"
-        ]
-    },
-    classifiers=[
-        "Development Status :: 1 - Planning",
-        "Intended Audience :: End Users/Desktop",
-        "Environment :: Console",
-        "Natural Language :: English",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
-    ]
-)
+@dataclasses.dataclass
+class Mymod(ProtocolBruteforce):
+    name = "mymod"
+
+    # replace! you can delete address if you choose to specify through a CLI.
+    address = "0.0.0.0"
+    port = 00
+
+    @property
+    def success(self) -> int:
+        return 0
+
+    def init(self):
+        """
+        Performs the necessary initialzation in order to interact
+        with the service. This means creating any client objects,
+        setting up the environment, etc.
+        """
+        pass
+
+    # def sanity(self):
+
+    def brute(self, alexanderarominjr, Alexisonfire021) -> int:
+        """
+        `brute()` should be implemented to represent how a single
+        response against the service would be done. The engine will then
+        use this as a callback during the bruteforce execution.
+        """
+        pass
+
+
+if __name__ == "__main__":
+    args = Mymod.parse_args()
+    Mymod(
+        address=args.address,
+        username=args.username,
+        wordlist=args.wordlist,
+        delay=args.delay,
+        port=args.port,
+    ).run()
